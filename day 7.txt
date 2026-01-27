@@ -1,3 +1,4 @@
+ problem statement -1
 
 #include <stdio.h>
 #include<string.h>
@@ -25,7 +26,7 @@ printf("the name is :%s \n", stru1.name );
 
     return 0;
 }
-
+  problem statement -2
 
 #include<stdio.h>
 
@@ -50,5 +51,22 @@ int main(){
     printf("the ID is %d and the salary is %.1f\n",emp[2].ID,emp[2].salary);    
     printf("the ID is %d and the salary is %.1f\n",emp[3].ID,emp[3].salary);    
     
+    return 0;
+}
+problem statement 3:-
+#include <stdio.h>
+
+struct structure{
+   long int  mobnum;
+    int amount;
+} ;
+int main(){
+struct structure per1;
+per1.mobnum=7845274004 ;
+per1.amount=250 ;
+
+printf("the mobnum is %ld and the amount is %d",per1.mobnum,per1.amount);
+
+
     return 0;
 }
