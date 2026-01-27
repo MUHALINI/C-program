@@ -1,25 +1,3 @@
-#include <stdio.h>
-//creating structure
-struct structure{
-    int rollno;
-char section;
-float cgpa;
-};
-int main() {
-//create structure variable for the structure
-struct structure stru1;
-//struct structure student2;
-//assiging values for structure variable
-stru1.rollno= 30;
-stru1.section='a';
-stru1.cgpa = 8.9;
-//printing values
-printf("The Roll no is ; %d \n",stru1.rollno);
-printf("The section is : %c \n", stru1.section);
-printf("The cgpa is ; %f \n", stru1.cgpa);
-
-    return 0;
-}
 
 #include <stdio.h>
 #include<string.h>
@@ -45,5 +23,32 @@ printf("The section is : %c \n", stru1.section);
 printf("The cgpa is ; %f \n", stru1.cgpa);
 printf("the name is :%s \n", stru1.name );
 
+    return 0;
+}
+
+
+#include<stdio.h>
+
+struct structure{
+    int ID;
+    float salary;
+
+    
+};
+int main(){
+    struct structure emp[3];
+    emp[1].ID=23 ;
+    emp[1].salary=5000 ;
+    emp[2].ID=22 ;
+    
+    emp[2].salary=2000;
+    emp[3].salary=4000;
+    emp[3].ID=24;
+    
+    
+    printf("the ID is %d and the salary is %.1f\n",emp[1].ID,emp[1].salary);  
+    printf("the ID is %d and the salary is %.1f\n",emp[2].ID,emp[2].salary);    
+    printf("the ID is %d and the salary is %.1f\n",emp[3].ID,emp[3].salary);    
+    
     return 0;
 }
