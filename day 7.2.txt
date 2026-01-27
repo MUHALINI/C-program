@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+struct structure{
+    
+   long int number;
+    float recharge;
+    
+};
+int main(){
+struct structure stru1;
+
+ stru1.number = 1234567890;
+ stru1.recharge = 500.00;
+ 
+ printf("Number :%ld\n",stru1.number);
+ printf("Recharge :%.2f\n",stru1.recharge);
+ 
+ return 0;
+}
+ 
+ Number :1234567890
+Recharge :500.00
