@@ -1,0 +1,89 @@
+
+#include <stdio.h>
+#include<stdlib.h>
+//create structure
+struct contact{
+    long int number;
+    struct contact *next;//structure nesting 
+};
+int main() {
+    //storage allocation
+    struct contact *ct1=(struct contact*)malloc(sizeof(struct contact));
+    struct contact *ct2=(struct contact*)malloc(sizeof(struct contact));
+    struct contact *ct3=(struct contact*)malloc(sizeof(struct contact));
+    //storing numbers
+    ct1->number =9847562891;
+     ct2->number =9765432809;
+      ct3->number =9345678903;
+      //interconnection
+      ct1->next=ct2;
+      ct2->next=ct3;
+      ct3->next=NULL;
+      //pointing head
+      struct contact *head =ct1;
+      //display
+      printf("contact:\n");
+      while(head != NULL){
+          printf(" %ld----->\n",head->number);
+          head = head->next;
+      }
+      printf("Finish");
+   
+    return 0;
+}
+
+
+  //problem statement 1//
+
+#include <stdio.h>
+#include<stdlib.h>
+//create structure
+struct contact{
+     int num;
+    struct contact *next;//structure nesting 
+};
+int main() {
+    //storage allocation
+    struct contact *ct1=(struct contact*)malloc(sizeof(struct contact));
+    struct contact *ct2=(struct contact*)malloc(sizeof(struct contact));
+    struct contact *ct3=(struct contact*)malloc(sizeof(struct contact));
+    scanf("%d %d %d",&ct1->num,&ct2->num,&ct3->num);
+      //interconnection
+      ct1->next=ct2;
+      ct2->next=ct3;
+      ct3->next=NULL;
+      //pointing head
+      struct contact *head =ct1;
+      //display
+      printf("contact:\n");
+      while(head != NULL){
+          printf(" %d----->",head->num);
+          head = head->next;
+      }
+      printf("NULL");
+   
+    return 0;
+}
+ // problem statement 2//
+#include<stdio.h>
+#include<stdlib.h>
+struct rollnumber{
+    int number;
+    struct rollnumber *next;
+};
+int main(){
+    struct rollnumber *num1 = (struct rollnumber*)malloc(sizeof(struct rollnumber));
+    struct rollnumber *num2 = (struct rollnumber*)malloc(sizeof(struct rollnumber));
+    scanf("%d %d",&num1->number,&num2->number);
+    num1->next = num2;
+    num2->next = NULL;
+    
+    struct rollnumber *head = num1;
+    while(head!=NULL){
+    printf("Roll %d->",head->number);
+    head = head->next;
+    }
+    printf("NULL");
+    return 0;
+}
+
