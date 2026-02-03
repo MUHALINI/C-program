@@ -1,0 +1,99 @@
+
+//stack(push operation)//
+
+#include<stdio.h>
+#define size 5
+int arr[size];
+int top = -1;
+//push
+void push(int value){
+    if(top == size -1){
+        printf("No space is left \n");
+    }
+    else{
+        top++;
+        arr[top] = value;
+        printf("%d value pushed to the array \n", value);
+    }
+}
+int main(){
+    push (10);
+    push (20);
+    push (40);
+    push (90);
+    push(30);
+    push(80);
+    return 0;
+}
+\\pop function//
+void pop(){
+    if(top == -1){
+        printf("no value is added at stack");
+    }else{
+        printf("The value is %d: \n", arr[top]);
+        top--;
+    }
+    
+}
+int main(){
+ push (10);
+ push  (20);
+ pop ();
+  pop ();
+   pop ();
+    
+  return 0;
+}
+#include<stdio.h>
+#define size 5
+int arr[size];
+int top = -1;
+//push
+void push(int value){
+    if(top == size -1){
+        printf("No space is left \n");
+    }
+    else{
+        top++;
+        arr[top] = value;
+        printf("%d value pushed to the array \n", value);
+    }
+}
+void pop(){
+    if(top == -1){
+        printf("no value is added at stack");
+    }else{
+        printf("The  value is %d: \n", arr[top]);
+        top--;
+    }
+}
+void peak(){
+    if(top == -1){
+        printf("no value is added at stack");
+    }else{
+        printf("The peak value is %d: \n", arr[top]);
+        
+    }
+}
+void isempty(){
+    if(top == -1){
+        printf("no value at stack");
+    }else{
+        printf("stack has items\n");  
+        }
+}
+void Size(){
+    printf("My stack size is:%zu \n",top+1);
+}
+int main(){
+    push (10);
+    push (20);
+ isempty();
+ Size();
+ pop();
+  isempty();
+  Size();
+ pop();
+ isempty();
+    return 0;
+}
